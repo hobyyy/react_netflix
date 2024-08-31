@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route } from 'react-router-dom';
+import './layout/AppLayout.css'
+import './pages/Hompage/Homepage.css'
+import { Routes, Route } from 'react-router-dom';
 import AppLayout from './layout/AppLayout';
 import Homepage from './pages/Hompage/Homepage';
 import MoviePage from './pages/Movies/MoviePage';
@@ -21,7 +23,7 @@ function App() {
           <Route path=":id" element={<MovieDetailPage/>}/>
         </Route>
       </Route>
-      
+
       <Route path="*" element={<NotFoundPage/>}/>
     </Routes>
   );
