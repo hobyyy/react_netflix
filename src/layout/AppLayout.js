@@ -10,7 +10,7 @@ const AppLayout = () => {
     <div>
       <Navbar expand="lg" className="bg-body-tertiary bg-dark">
         <Container fluid>
-          <img width='100' src='/textlogo.png'/>
+          {/* <img width='100' src='/textlogo.png'/> */}
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
           <Nav
