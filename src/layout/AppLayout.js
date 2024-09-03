@@ -8,7 +8,12 @@ import { Outlet } from 'react-router-dom'; // router 안에 있는 자손들을 
 const AppLayout = () => {
   return (
     <div>
-      <Navbar expand="lg" className="bg-body-tertiary bg-dark">
+      <Navbar 
+        bg="dark"
+        data-bs-theme="dark"
+        expand="lg" 
+        className="bg-body-tertiary bg-dark"
+      >
         <Container fluid>
           <img 
             width='100' 
