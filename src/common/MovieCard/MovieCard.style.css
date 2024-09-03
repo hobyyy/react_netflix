@@ -1,9 +1,15 @@
 .movie-card {
-  width: 220px;
-  height: 330px;
+  width: 10rem;
+  height: 15rem;
   background-size: cover;
   cursor: pointer;
   transition: 0.5s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05) translateZ(20px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 .overlay {
   width: 100%;
@@ -26,12 +32,9 @@
 }
 
 .overlay .adult {
-  width: 30px; 
-  height: 30px; 
+  width: 2rem !important; 
+  height: 2rem !important; 
   line-height: 30px; 
-  position: absolute; 
-  right: 20px; 
-  top: 20px; 
   text-align: center; 
   background-color: red; 
   color: #000;
@@ -40,4 +43,20 @@
 }
 .overlay .adult.all {
   background-color: yellow;
+}
+.movie-card-title {
+  display: flex;
+  justify-content: space-between;
+}
+.h4 {
+  font-size: calc(1.275rem + .3vw);
+  width: 7rem;
+}
+.movie-vote {
+  font-size: 14px;
+  color: #f5c518;
+}
+.movie-popularity {
+  font-size: 14px;
+  color: #b3b3b3;
 }

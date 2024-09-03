@@ -1,6 +1,6 @@
 .carousel-container { 
     overflow: hidden;
-    height: 440px;
+    height: 20rem;
   }
   
   @media (max-width:480px) {

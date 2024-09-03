@@ -2,7 +2,8 @@ import React from 'react'
 import { Badge } from 'react-bootstrap'
 import './MovieCard.style.css'
 import { useMovieGenreQuery } from '../../hooks/useMovieGenre'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from '@fortawesome/free-regular-svg-icons';
 
 const MovieCard = (movie) => {
   const { data:genreData } = useMovieGenreQuery();
@@ -20,19 +21,25 @@ const MovieCard = (movie) => {
       className='movie-card'  
     >
       <div className='overlay'>
-        <h4>{movie.movie.title}</h4>
+        <div className='movie-card-title'>
+          <div className='h4'>{movie.movie.title}</div>
+          <div className={`adult ${movie.movie.adult === "18" ? "" : "all"}`}>
+            {movie.movie.adult ? "18" : "All"}
+          </div>
+        </div>
         {showGenre(movie.movie.genre_ids).map((genre, index) => (
           <Badge bg='danger' key={index} className='me-1'>
             {genre}
           </Badge>
           ))}
         <div>
-          <div>{movie.movie.vote_average}</div>
-          <div>{movie.movie.popularity}</div>
-          <div className={`adult ${movie.movie.adult === "18" ? "" : "all"}`}>
-          {movie.movie.adult ? "18" : "All"}
-        </div>
-          <div>{movie.movie.adult ? "over18" : "under18"}</div>
+          <div className="movie-vote">
+            ★ {Math.floor(movie.movie.vote_average * 10) / 10}
+          </div>
+          <div className="movie-popularity">
+            <FontAwesomeIcon icon={faUser} /> {Math.floor(movie.movie.popularity)}
+          </div>
+
         </div>
       </div>
     </div>

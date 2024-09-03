@@ -17,7 +17,7 @@ export const MovieSlider = ({ title, movies,responsive }) => {
           {movies?.map((movie,index) => (
             <MovieCard movie={movie} key={index}/>
           ))}
-        </Carousel>;
+        </Carousel>
     </div>
   )
 }
