@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Outlet } from 'react-router-dom'; // router 안에 있는 자손들을 가지고 올 수 있게 도와주는 컴포넌트 
 const AppLayout = () => {
+
   return (
     <div>
       <Navbar 
@@ -15,10 +16,12 @@ const AppLayout = () => {
         className="bg-body-tertiary bg-dark"
       >
         <Container fluid>
-          <img 
-            width='100' 
-            src={`${process.env.PUBLIC_URL}/textlogo.png`}
-          />
+          <a className="logo" href="/">
+            <img 
+              width='100' 
+              src={`${process.env.PUBLIC_URL}/textlogo.png`}
+            />
+          </a>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
           <Nav
