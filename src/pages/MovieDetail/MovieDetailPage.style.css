@@ -1,0 +1,21 @@
+.movie-card-title {
+  display: flex;
+  justify-content: space-between;
+}
+.h4 {
+  font-size: calc(1.275rem + .3vw);
+  width: 19rem;
+}
+.adult {
+  width: 2rem !important; 
+  height: 2rem !important; 
+  line-height: 30px; 
+  text-align: center; 
+  background-color: red; 
+  color: #000;
+  border-radius: 50%; 
+  font-size: 14px;
+}
+.adult.all {
+  background-color: yellow;
+}
